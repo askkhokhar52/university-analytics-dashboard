@@ -1,0 +1,22 @@
+{
+  "name": "university-analytics-dashboard",
+  "version": "1.0.0",
+  "description": "Executive University Analytics Dashboard for Departments, Students, and Alumni records powered by Supabase with automated KPIs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "university",
+    "dashboard",
+    "analytics",
+    "supabase",
+    "kpi",
+    "students",
+    "alumni",
+    "departments"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Environment Variables (protects API credentials from secret scanning)
+.env
+.env.local
+.env.*.local
+
+# Logs & Temp
+*.log
+.DS_Store
+Thumbs.db
