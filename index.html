@@ -938,10 +938,13 @@
 
       const startTime = performance.now();
 
-      // Method 1: Check if /api/data aggregate endpoint is available on local server
+      // Method 1: Check if static aggregate dataset or /api/data endpoint is available
       if (window.location.origin && window.location.origin.startsWith('http')) {
         try {
-          const fastRes = await fetch(window.location.origin + '/api/data');
+          let fastRes = await fetch(window.location.origin + '/real-data.json');
+          if (!fastRes.ok) {
+            fastRes = await fetch(window.location.origin + '/api/data');
+          }
           if (fastRes.ok) {
             const aggregateData = await fastRes.json();
             const elapsed = Math.round(performance.now() - startTime);

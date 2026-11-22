@@ -1,5 +1,6 @@
 {
-  "version": 2,
+  "buildCommand": null,
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
@@ -7,15 +8,12 @@
       "source": "/(.*)",
       "headers": [
         { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-        { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, apikey, Authorization" }
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,POST" },
+        { "key": "Access-Control-Allow-Headers", "value": "*" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/api/data", "destination": "/real-data.json" },
-    { "source": "/api/health", "destination": "/api/health" },
-    { "source": "/api/config", "destination": "/api/config" },
-    { "source": "/", "destination": "/index.html" }
+    { "source": "/api/data", "destination": "/real-data.json" }
   ]
 }
